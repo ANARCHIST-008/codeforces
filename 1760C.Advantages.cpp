@@ -44,44 +44,6 @@ For each test case, output n
  and the maximum strength of any other participant.*/
 
 
-
- /*
-#include <iostream>
-#include <vector>
-#include <algorithm>
-
-using namespace std;
-
-int main(){
-    int t;
-    cin >> t;
-    while(t--){
-        int n;
-        cin >> n;
-        vector<int> arr;
-        for(int i = 0;i < n;i++){
-            int e;
-            cin >> e;
-            arr.push_back(e);
-        }
-
-        for(int i = 0;i < n;i++){
-            int left_max = *max_element(arr.begin(), arr.begin() + i - 1);
-            int right_max = *max_element(arr.begin() + i + 1, arr.end());
-            if(left_max >= right_max){
-                cout << arr[i] - left_max << endl;
-            }else{
-                cout << arr[i] - right_max << endl;
-            }
-        }
-
-    }
-}
-
-
-*/
-
-
 #include <iostream>
 #include <vector>
 #include <algorithm>

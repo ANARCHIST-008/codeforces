@@ -1,0 +1,40 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    int test_cases;
+    cout << "enter the test case you want to perform:";
+    cin >> test_cases;
+
+    while(test_cases--){
+        int n, a, b, c;
+        cin >> n >> a >> b >> c;
+
+        if (a == 0 && b == 0 && c == 0) {
+            cout << n + 1 << endl;
+            return 0;
+        }
+
+        int cycle_sum = a + b + c;
+        int cycle_requirement = (n/cycle_sum);
+        int distance_covered = cycle_requirement * cycle_sum;
+        int days_requirement = cycle_requirement * 3;
+
+        if(distance_covered < n){
+            if(distance_covered + a >= n){
+                days_requirement += 1;
+            }else if(distance_covered + a + b >= n){
+                days_requirement += 2;
+            }else{
+                days_requirement += 3;
+            }
+        }
+
+        cout << days_requirement << endl;
+    }
+}
+
+
+
+
+
